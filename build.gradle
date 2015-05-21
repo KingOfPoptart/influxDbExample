@@ -1,0 +1,22 @@
+apply plugin: 'maven-publish'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+archivesBaseName = 'influxdb.example'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+eclipse {
+  project {
+    name = 'influxDbExample'
+  }
+}
+
+dependencies {
+  compile group: 'org.influxdb', name: 'influxdb-java', version: '1.5'
+}
+
